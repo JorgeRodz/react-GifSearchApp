@@ -1,13 +1,82 @@
+html {
+  font-size: 62.5%; /*Reset para REMS - 62.5% = 10px de 16px | 1 rem = 10px  */
+  box-sizing: border-box; /*Aplicar correctamente box-sizing*/
+}
+*,
+*::before,
+*::after {
+  /*Aplicar correctamente box-sizing*/
+  box-sizing: inherit; /*Aplicar correctamente box-sizing*/
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Raleway", sans-serif; /*Establecimos el tipo de fuente para todo el documento*/
+  font-size: 1.6rem; /*Para establecer un tamaño estandar a todo el font-size del documento;*/
+  margin: 0 5%;
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+h1,
+h2 {
+  color: whitesmoke;
+}
+h2 {
+  margin-bottom: 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+input {
+  width: 50%;
+}
+input:focus {
+  outline: none;
+  border-color: #719ece;
+  box-shadow: 0 0 3px #719ece;
+}
+ol {
+  padding: 0;
+}
+hr {
+  margin-top: 2.5rem;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.card {
+  text-align: center;
+  /* border: 1px solid gray; */
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+}
+.card img {
+  border-radius: 5px;
+  max-height: 20rem;
+  width: 80%;
+}
+.card p {
+  margin: 0;
 }
